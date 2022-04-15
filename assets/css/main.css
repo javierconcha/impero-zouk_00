@@ -3587,7 +3587,7 @@ input, select, textarea {
 
 					#wrapper > section > header {
 						background-attachment: fixed;
-						background-color: #49fcd4;
+						background-color: transparent;
 						background-image: url(image/icon.jpg);
 						background-position: 25% 50%;
 						background-repeat: repeat-y;
