@@ -3795,19 +3795,21 @@ input, select, textarea {
 		}
 
 	body.is-mobile #wrapper:before {
-		background-attachment: scroll;
-		background-position: 50% -3%;
-		background-repeat: repeat-y;
-		background-size: 150% auto;
+		background-attachment: fixed;
+		background-position: 50% 10%;
+		background-repeat: no-repeat;
+		background-size: 30% auto;
 	}
 
 	body.is-mobile #wrapper > section > header {
-		background-attachment: scroll;
-		background-position: 25% 50%;
+		background-attachment: fixed;
+		background-position: 50% 10%;
+		background-size: 30% auto;
 	}
 
 	body.is-mobile #wrapper > section.intro > header {
-		background-position: 25% 23%;
+		background-position: 50% 1%;
+		background-size: 30% auto;
 	}
 
 	#wrapper:before {
