@@ -15,9 +15,10 @@ a {
     text-decoration: none;
 }
 
-/* header {
+.mainHeader {
     background-color: #417014;
-    height: 100px;
+    /* background-color: #fff; */
+    height: 80px;
     padding: 10px 0;
 }
 
@@ -28,20 +29,19 @@ a {
 
 .logo img {
     width: 100px;
-} */
+}
 
-/* nav {
-    width: 960px;
+nav {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-} */
+}
 
 .lang-menu {
-    background-color: #417014;
-    /* margin-top: 25px; */
+    margin-top: 0px;
+    margin-left: 10px;
     position: relative;
-    padding: 5px 10px;
 
 }
 
@@ -49,8 +49,8 @@ a {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    line-height: 1.0;
-    width: 100px;
+    line-height: 1;
+    width: 60px;
 }
 
 .selected-lang:before {
@@ -70,7 +70,7 @@ a {
     border-radius: 5px;
     display: none;
     position: absolute;
-    top: 40;
+    top: 20px;
     left: 0;
 }
 
@@ -81,9 +81,9 @@ a {
 }
 
 .lang-menu ul li a {
-    width: 140px;
+    width: 60px;
     display: block;
-    padding: 5px 10px;
+    padding: 1px 1px;
 }
 
 .lang-menu ul li a:before {
@@ -92,11 +92,12 @@ a {
     width: 32px;
     height: 17px;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 1px;
 }
 
 .lang-menu ul li a:hover {
     background-color: #f2f2f2;
+    border-radius: 5px;
 }
 
 .it:before {

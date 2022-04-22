@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://necolas.github.io/normalize.css/');
 
-body {
+/* body {
     font-family: 'Source+Sans+Pro', sans-serif;
     color: #333;
     
-}
+} */
 
 * {
     box-sizing: border-box;
@@ -15,9 +15,10 @@ a {
     text-decoration: none;
 }
 
-header {
-    background-color: #f2f2f2;
-    height: 100px;
+.mainHeader {
+    background-color: #417014;
+    /* background-color: #fff; */
+    height: 80px;
     padding: 10px 0;
 }
 
@@ -31,14 +32,15 @@ header {
 }
 
 nav {
-    width: 960px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 .lang-menu {
-    margin-top: 25px;
+    margin-top: 0px;
+    margin-left: 10px;
     position: relative;
 
 }
@@ -47,8 +49,8 @@ nav {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    line-height: 1.2;
-    width: 85px;
+    line-height: 1;
+    width: 60px;
 }
 
 .selected-lang:before {
@@ -56,7 +58,7 @@ nav {
     display: block;
     width: 32px;
     height: 17px;
-    background-image: url('../italy-flag-icon-32.png');
+    background-image: url('./italy-flag-icon-32.png');
 }
 
 .lang-menu ul {
@@ -68,7 +70,7 @@ nav {
     border-radius: 5px;
     display: none;
     position: absolute;
-    top: 40;
+    top: 20px;
     left: 0;
 }
 
@@ -79,9 +81,9 @@ nav {
 }
 
 .lang-menu ul li a {
-    width: 140px;
+    width: 60px;
     display: block;
-    padding: 5px 10px;
+    padding: 1px 1px;
 }
 
 .lang-menu ul li a:before {
@@ -90,19 +92,20 @@ nav {
     width: 32px;
     height: 17px;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 1px;
 }
 
 .lang-menu ul li a:hover {
     background-color: #f2f2f2;
+    border-radius: 5px;
 }
 
 .it:before {
-    background-image: url('../italy-flag-icon-32.png');
+    background-image: url('./italy-flag-icon-32.png');
 }
 
 .en:before {
-    background-image: url('../usa-flag-icon-32.png');
+    background-image: url('./usa-flag-icon-32.png');
 }
 
 .lang-menu:hover ul {
