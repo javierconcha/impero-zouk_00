@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://necolas.github.io/normalize.css/');
+
+/* body {
+    font-family: 'Source+Sans+Pro', sans-serif;
+    color: #333;
+    
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainHeader {
+    background-color: #417014;
+    /* background-color: #fff; */
+    height: 80px;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 100px;
+
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu {
+    margin-top: 0px;
+    margin-left: 10px;
+    position: relative;
+
+}
+
+.selected-lang {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    width: 60px;
+}
+
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 17px;
+    background-image: url('./usa-flag-icon-32.png');
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: #f8f8f8;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.lang-menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    width: 60px;
+    display: block;
+    padding: 1px 1px;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 17px;
+    vertical-align: middle;
+    margin-right: 1px;
+}
+
+.lang-menu ul li a:hover {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.it:before {
+    background-image: url('./italy-flag-icon-32.png');
+}
+
+.en:before {
+    background-image: url('./usa-flag-icon-32.png');
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
