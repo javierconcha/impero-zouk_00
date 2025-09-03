@@ -15,7 +15,7 @@
 </script>
 <!-- Navigator-->
 <script>
-	function myFunction() {
+	function toggleMenu() {
 		var x = document.getElementById("myTopnav");
 		if (x.className === "topnav") {
 		x.className += " responsive";
@@ -49,6 +49,8 @@
 		.topnav {
 		  overflow: hidden;
 		  background-color:#417014;
+		  position: relative;
+		  z-index: 10; /* menu always on top */
 		}
 		
 		.topnav a {
@@ -91,10 +93,14 @@
 			top: 0;
 		  }
 		  .topnav.responsive a {
-			float: none;
-			display: block;
+		    display: block !important; /* force show */
+    		float: none;
 			text-align: left;
 		  }
+		}
+		.logo {
+			position: relative;
+			z-index: 1;
 		}
 		</style>
 	
@@ -121,7 +127,7 @@
 					<a href="./index.html"  class="active">Home</a>
 					<a href="./sharome.html">SHARomE 2025</a>
 					<a href="./lessons/lessons.html">Lessons</a>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
 					<i class="fa fa-bars"></i>
 					</a>
 				</div>

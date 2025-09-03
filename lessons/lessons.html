@@ -47,6 +47,8 @@ function myFunction() {
 		.topnav {
 		  overflow: hidden;
 		  background-color: #417014;
+		  position: relative;
+		  z-index: 10; /* menu always on top */
 		}
 		
 		.topnav a {
@@ -93,6 +95,10 @@ function myFunction() {
 			display: block;
 			text-align: left;
 		  }
+		}
+		.logo {
+			position: relative;
+			z-index: 1;
 		}
 		</style>
 	

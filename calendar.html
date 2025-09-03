@@ -49,6 +49,8 @@
 		.topnav {
 		  overflow: hidden;
 		  background-color:#417014;
+		  position: relative;
+		  z-index: 10; /* menu always on top */
 		}
 		
 		.topnav a {
@@ -96,6 +98,10 @@
 			text-align: left;
 		  }
 		}
+			.logo {
+			position: relative;
+			z-index: 1;
+		}
 		</style>
 	
 	
@@ -107,6 +113,7 @@
 				<div class="topnav" id="myTopnav">
 					<a href="./index.html"  class="active">Home</a>
 					<a href="./sharome.html">SHARomE 2025</a>
+					<a href="./lessons/lessons.html">Lessons</a>
 					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 					<i class="fa fa-bars"></i>
 					</a>
