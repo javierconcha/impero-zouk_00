@@ -25,234 +25,301 @@ function myFunction() {
 }
 </script>
 
+<!DOCTYPE HTML>
 <html lang="en">
-	<head>
-		<title>Lessons</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="stylesheet" href="../assets/css/style_LangSel_en.css">
-	
-	
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<style>
-		body {
-		  margin: 0;
-		  font-family: Arial, Helvetica, sans-serif;
+<head>
+    <title>Lessons</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/style_LangSel_en.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #417014;
+            position: relative;
+            z-index: 10;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 0px 5px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #417014;
+            color: white;
+        }
+
+        .topnav .icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {float: right; display: block;}
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {position: absolute; right: 0; top: 0;}
+            .topnav.responsive a {float: none; display: block; text-align: left;}
+        }
+
+        .logo {position: relative; z-index: 1;}
+
+		.it {
+			font-weight: 600;  /* Bold for Italian */
+			color: #222;       /* Darker color */
 		}
-		
-		.topnav {
-		  overflow: hidden;
-		  background-color: #417014;
-		  position: relative;
-		  z-index: 10; /* menu always on top */
+
+		.en {
+			font-style: italic; /* Italic for English */
+			color: #555;        /* Softer color */
 		}
-		
-		.topnav a {
-		  float: left;
-		  display: block;
-		  color: #f2f2f2;
-		  text-align: center;
-		  padding: 0px 5px;
-		  text-decoration: none;
-		  font-size: 17px;
+
+		.it, .en {
+   			font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
 		}
-		
-		.topnav a:hover {
-		  background-color: #ddd;
-		  color: black;
+
+		section .content p {
+			margin: 16px 0;      /* subtle spacing between lines */
 		}
-		
-		.topnav a.active {
-		  background-color: #417014;
-		  color: white;
-		}
-		
-		.topnav .icon {
-		  display: none;
-		}
-		
-		@media screen and (max-width: 600px) {
-		  .topnav a:not(:first-child) {display: none;}
-		  .topnav a.icon {
-			float: right;
-			display: block;
-		  }
-		}
-		
-		@media screen and (max-width: 600px) {
-		  .topnav.responsive {position: relative;}
-		  .topnav.responsive .icon {
-			position: absolute;
-			right: 0;
-			top: 0;
-		  }
-		  .topnav.responsive a {
-			float: none;
-			display: block;
-			text-align: left;
-		  }
-		}
-		.logo {
-			position: relative;
-			z-index: 1;
-		}
-		</style>
-	
-	
-	</head>
-	<body class="is-preload">  
-		<header class="mainHeader">
-			<nav>				
-				<div class="topnav" id="myTopnav">
-					<a href="../index.html">Home</a>
-					<a href="../sharome.html" >SHARomE 2025</a>
-					<a href="./lessons.html"  class="active">Lessons</a>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-					<i class="fa fa-bars"></i>
-					</a>
-				</div>
-		
-				<div class="logo">
-					<a href="../index.html"><img src="../images/logo3.jpg" alt="IZR Logo"></a>
-				</div>
-			</nav>
-		</header>		
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Intro -->
-					<section class="intro">
-						<header>
-							<!-- <p></p> -->
-							<ul class="actions">
-								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
-						</header>
-						<div class="content">
-							<span class="image fill" data-position="center"><img src="./images/Cover_lessons.jpg" style="width:100%;" alt="" /></span>
-						</div>
-					</section>
+
+    </style>
+</head>
+<body class="is-preload">  
+
+<header class="mainHeader">
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="../index.html">Home</a>
+            <a href="../sharome.html">SHARomE 2025</a>
+            <a href="./lessons.html" class="active">Lessons</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html"><img src="../images/logo3.jpg" alt="IZR Logo"></a>
+        </div>
+    </nav>
+</header>
+
+<div id="wrapper">
+    <!-- Intro -->
+    <section class="intro">
+        <header>
+            <ul class="actions">
+                <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <span class="image fill" data-position="center">
+                <img src="./images/Cover_lessons.jpg" style="width:100%;" alt="Cover Lessons Image" />
+            </span>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section>
+        <header>
+            <h2>LEZIONI <i>- LESSONS</i></h2>
+            <h3>Vieni ad imparare con noi <i>- Come to learn from us!</i></h3>
+            <p>Abbiamo lezione di Brazilian Zouk in diversi locations della città. <i>- We teach Brazilian Zouk in different locations around the city.</i></p>
+        </header>
+
+        <div class="content">
+            <div class="gallery">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1MuLllDd_o4BdMVJGSsx4_-bOHTM9Ino&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
+            </div>
+        </div>
+    </section>
+
+<!-- Pigneto Section -->
+<section>
+  <header>
+    <h2>ZONA PIGNETO CASILINA <i>- PIGNETO ZONE</i></h2>
+    <h3>MERCOLEDÌ <i>- WEDNESDAYS</i></h3>
+    <p>Close to the Pigneto station of Metro C at the Viva Dance Studio.</p>
+  </header>
+
+  <div class="content">
+    <p>
+      <span class="it">🇮🇹 💃🕺 Lezione di Zouk Brasiliano con Impero Zouk Rome </span> 
+      | 
+      <span class="en">🇬🇧 Brazilian Zouk class with Impero Zouk Rome ✨</span>
+    </p><br>
+
+    <p>
+      <span class="it">🇮🇹 In collaborazione con <b>Viva Dance Studio</b> e <b>Mariposa Dance School</b></span>
+      | 
+      <span class="en">🇬🇧 In collaboration with <b>Viva Dance Studio</b> and <b>Mariposa Dance School</b></span>
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 👨‍🏫 <strong>Maestri:</strong> Javi &amp; Mari</span> 
+      | 
+      <span class="en">🇬🇧 <strong>Teachers:</strong> Javi &amp; Mari</span>
+    </p>
+
+    <p>
+      📍 <strong>Location:</strong> Viva Dance Studio – <a href="https://maps.app.goo.gl/h4KwPmbMnfBkXyCS9">Via Bartolomeo d'Alviano, 7a, 00176 Roma RM</a>
+    </p>
+
+    <p>
+      🕗 20:00 → 30 min pratica<br>
+      🕗 20:30 → Lezione (1h)
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 ✨ Prima lezione di prova gratuita! </span> 
+      | 
+      <span class="en">🇬🇧 First trial class free! ✨</span>
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 (Per la prova non è richiesto il certificato medico)</span> 
+      | 
+      <span class="en">🇬🇧 (No medical certificate required for the trial)</span>
+    </p>
+
+    <p>
+		<span class="it">🇮🇹 Registrati <a href="https://forms.gle/7wyBPAxSK4MXZMn19">QUI</a></span>
+		|
+		<span class="en">🇬🇧 Register <a href="https://forms.gle/7wyBPAxSK4MXZMn19">HERE</a></span>
+	</p>
+
+    <div class="gallery">
+      <a href="./images/fulls/Lessons_2025_VivaDance.jpg" class="landscape">
+        <img src="./images/thumbs/Lessons_2025_VivaDance_thumb.png" alt="Brazilian Zouk lessons 2025 poster at Viva Dance Studio, Rome" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Tuscolana Section -->
+<section>
+  <header>
+    <h2>ZONA TUSCOLANA <i>- TUSCOLANA ZONE</i></h2>
+    <h3>GIOVEDÌ <i>- THURSDAYS</i></h3>
+    <p>Vicino alla fermata della metro A Numidio Quadrato, al Sakura Gym. <i>- Close to the Numidio Quadrato station of Metro A, at the Sakura Gym.</i></p>
+  </header>
+
+  <div class="content">
+    <p>
+      <span class="it">🇮🇹 💃🕺 Lezione di Zouk Brasiliano con <b>Impero Zouk Rome</b></span> 
+      | 
+      <span class="en">🇬🇧 Brazilian Zouk class with Impero Zouk Rome ✨</span>
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 In collaborazione con Sakura Gym</span> 
+      | 
+      <span class="en">🇬🇧 In collaboration with Sakura Gym</span>
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 👨‍🏫 Maestri: Javi &amp; Mari</span> 
+      | 
+      <span class="en">🇬🇧 Teachers: Javi &amp; Mari</span>
+    </p>
+
+    <p>
+      📍 <strong>Location:</strong> Sakura Gym – <a href="https://maps.app.goo.gl/fDS9guocuDXX6Lza8">Via Vestricio Spurinna, 32, 00175 Roma RM</a>
+    </p>
+
+    <p>
+      🕗 20:00 → Lezione (1h30)<br>
+      🕗 21:30 → 30 min pratica 
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 ✨ Prima lezione di prova gratuita!</span> 
+      | 
+      <span class="en">🇬🇧 First trial class free! ✨</span>
+    </p>
+
+    <p>
+      <span class="it">🇮🇹 (Per la prova non è richiesto il certificato medico)</span> 
+      | 
+      <span class="en">🇬🇧 (No medical certificate required for the trial)</span>
+    </p>
+
+	<p>
+		<span class="it">🇮🇹 Registrati <a href="https://forms.gle/Y2dn1hE8sqeFmTdJ9">QUI</a></span>
+		|
+		<span class="en">🇬🇧 Register <a href="https://forms.gle/Y2dn1hE8sqeFmTdJ9">HERE</a></span>
+	</p>
+
+    <div class="gallery">
+      <a href="./images/fulls/Lessons_2025_Sakura.jpg" class="landscape">
+        <img src="./images/thumbs/Lessons_2025_Sakura_thumb.png" alt="Brazilian Zouk lessons 2025 poster at Sakura Gym, Rome" />
+      </a>
+    </div>
+  </div>
+</section>
 
 
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>LEZIONI<i>- LESSONS</i></h2>
-							<h3>Vieni ad impare con noi<i>- Come to learn from us!</i></h3>
-							<p>Abbiamo lezione di Brazilian Zouk in diversi locations della città. <i>- We teach Brazilian Zouk in different locations around the city.</i></a>   
-							</p>
-						</header>
+    <!-- Contact Section -->
+    <section>
+        <header><h2>Get in touch</h2></header>
+        <footer>
+            <ul class="items">
+                <li>
+                    <h3>Email</h3>
+                    <a href="mailto:imperozouk@gmail.com">imperozouk@gmail.com</a>
+                </li>
+                <li>
+                    <h3>Phone (WhatsApp)</h3>
+                    <a href="tel:+393477522354">+39 347 752 2354</a>
+                </li>
+                <li>
+                    <h3>Elsewhere</h3>
+                    <ul class="icons">
+                        <li><a href="https://www.facebook.com/imperozouk" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/impero.zouk.rome/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="https://github.com/javierconcha/impero-zouk_00" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+    </section>
 
-						<div class="content">
-							<div class="gallery">
-								<iframe src="https://www.google.com/maps/d/embed?mid=1MuLllDd_o4BdMVJGSsx4_-bOHTM9Ino&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
-							</div>
-						</div>
-						
-					</section>
+    <div class="copyright">&copy; Impero Zouk Rome 2019-2025. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+</div>
 
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>ZONA PIGNETO CASILINA<i>- PIGNETO ZONE</i></h2>
-							<h3>MERCOLEDÌ <i>- WEDNESDAYS</i></h3>
-							<p> Close to the Pigneto station of Metro C at the Viva Dance Studio.</a></p>
-						</header>
-						<div class="content">
-							In collaboration with Viva Dance studio and Mariposa dance school.<br>
-							Location: Viva Dance Studio , <a href="https://maps.app.goo.gl/h4KwPmbMnfBkXyCS9">Via Bartolomeo d'Alviano, 7a, 00176 Roma RM.</a><br>
-							When: mercoledì, ore 20:30<br>
-							<b>Register <a href="https://forms.gle/7wyBPAxSK4MXZMn19"> HERE.</a></b>
-							<div class="gallery">
-								<a href="./images/fulls/Lessons_2025_VivaDance.jpg" class="landscape"><img src="./images/thumbs/Lessons_2025_VivaDance_thumb.png" alt="" /></a>
-							</div>
-							
-						</div>
-					</section>
-					<section>
-						<header>
-							<h2>ZONA TUSCOLANA <i>- TUSCOLANA ZONE</i></h2>
-							<h3>GIOVEDÌ <i>- THURSDAYS</i></h3>
-							<p>Vicino alla fermata della metro A Numidio Quadrato, al Sakura Gym.<i>- Close to the Numidio Quadrato station of Metro A, at the Sakura Gym.</i> </a></p>
-						</header>
-						<div class="content">
-							In collaboration with Sakura Gym.<br>
-							Location: Sakura Gym, <a href="https://maps.app.goo.gl/fDS9guocuDXX6Lza8">Via Vestricio Spurinna, 32, 00175 Roma RM.</a><br>
-							When: giovedì, ore 20:00<br>
-							<b>Register <a href="https://forms.gle/Y2dn1hE8sqeFmTdJ9"> HERE.</a></b>
-							<div class="gallery">
-								<a href="./images/fulls/Lessons_2025_Sakura.jpg" class="landscape"><img src="./images/thumbs/Lessons_2025_Sakura_thumb.png" alt="" /></a>
-							</div>
-							
-						</div>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrolly.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
 
-					</section>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") { x.className += " responsive"; } 
+    else { x.className = "topnav"; }
+}
+</script>
 
-					<!-- <section>
-						<header>
-							<h2> ZONA BOCCEA CORNELIA <i>- BOCCEA CORNELIA ZONE</i></h2>
-							<h3> UN GIOVEDÌ AL MESE <i>- ONE THURSDAY PER MONTH</i></h3>
-							<p> Close to the Cornelia station of Metro A at the Viva Dance studio.</a>   
-							</p>
-						</header>
-						<div class="content">
-							In collaboration with Mariposa Dance School.<br>
-							Location: Mariposa Dance School, <a href="https://maps.app.goo.gl/dgtNgbvt59iaHjv87">Via Gregorio XI, 6, 00166 Roma RM.</a><br>
-							When: un giovedì al mese, ore 21:00
-							<div class="gallery">
-								<a href="./images/fulls/Lessons_2024_Mariposa.jpeg" class="landscape"><img src="./images/thumbs/Lesson_2024_Mariposa_thumb.png" alt="" /></a>
-							</div>
-						</div>
-					</section> -->
-
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>Get in touch</h2>
-						</header>
-						<footer>
-							<ul class="items">
-								<li>
-									<h3>Email</h3>
-									<a href="mailto:imperozouk@gmail.com">imperozouk@gmail.com</a>
-								</li>
-								<li>
-									<h3>Phone (WhatsApp)</h3>
-									<a href="tel:+393477522354">+39 347 752 2354</a>
-								</li>
-								<!-- <li>
-									<h3>Address</h3>
-									<span>1234 Somewhere Road, Nashville, TN 00000</span>
-								</li> -->
-								<li>
-									<h3>Elsewhere</h3>
-									<ul class="icons">
-										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-										<li><a href="https://www.facebook.com/imperozouk" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/impero.zouk.rome/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<!-- <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li> -->
-										<li><a href="https://github.com/javierconcha/impero-zouk_00" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-										<!-- <li><a href="#" class="icon brands fa-codepen"><span class="label">Codepen</span></a></li> -->
-									</ul>
-								</li>
-							</ul>
-						</footer>
-					</section>
-
-				<!-- Copyright -->
-					<div class="copyright">&copy; Impero Zouk Rome 2019-2024. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
-
-			</div>
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
