@@ -101,20 +101,30 @@ function myFunction() {
 			z-index: 1;
 		}
 
-		.intro {
-			margin-bottom: 0 !important;
-			padding-bottom: 0 !important;
-		}
+.intro {
+  position: relative;
+  z-index: 1;
+}
 
-		.intro + section {
-			margin-top: 0 !important;
-		}
+.intro .content {
+  position: relative;
+  z-index: 1;
+}
 
+.intro + section {
+  margin-top: 2rem !important; /* creates clear separation after the image */
+}
 		.intro + section header {
 			margin-top: 0 !important;
 			padding-top: 0 !important;
 		}
 
+.image.fill img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 		</style>
 	
 	
@@ -150,7 +160,7 @@ function myFunction() {
 						</header>
 						<div class="content">
 						<span class="image fill" data-position="center">
-							<img src="images/mac-festival-2025-italy-banniere_portrait.png" style="width:100%; height: auto; height: auto; display: block;" alt="" />
+							<img src="images/mac-festival-2025-italy-banniere_portrait.png" style="width:100%; height: auto; display: block;" alt="" />
 						</span>
 						</div>
 					</section>
@@ -173,7 +183,7 @@ function myFunction() {
 									</header>
 									<div class="content">
 										<div class="content">
-											<p>
+											<p><br/>
 												(English below)<br/>
 
 <div style="max-width:400px;margin:30px auto;padding:20px;border:2px solid #e5e5e5;
