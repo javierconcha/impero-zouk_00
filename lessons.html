@@ -100,7 +100,15 @@ function myFunction() {
 		section .content p {
 			margin: 16px 0;      /* subtle spacing between lines */
 		}
+    .video-container {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		}
 
+		.video-container iframe {
+		width: 100%;
+		height: 100%;
+		}
     </style>
 </head>
 <body class="is-preload">  
@@ -145,7 +153,15 @@ function myFunction() {
             <h3>Vieni ad imparare con noi! <i>| Come to learn from us!</i></h3>
             <p>Abbiamo lezione di Brazilian Zouk in diversi locations della città. <i>| We teach Brazilian Zouk in different locations around the city.</i></p>
         </header>
-
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/8ZIJ3I1EaV0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="content">
             <div class="gallery">
                 <iframe src="https://www.google.com/maps/d/embed?mid=1MuLllDd_o4BdMVJGSsx4_-bOHTM9Ino&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
