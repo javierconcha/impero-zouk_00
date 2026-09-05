@@ -25,16 +25,21 @@ function myFunction() {
 }
 </script>
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lessons</title>
+    <title>Brazilian Zouk Lessons in Rome | Impero Zouk Rome</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/style_LangSel_en.css">
+    <link rel="stylesheet" href="./assets/css/style_LangSel_en.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
+        /* =========================================================
+           NAVIGATION
+           ========================================================= */
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -52,14 +57,14 @@ function myFunction() {
             display: block;
             color: #f2f2f2;
             text-align: center;
-            padding: 0px 5px;
+            padding: 0 5px;
             text-decoration: none;
             font-size: 17px;
         }
 
         .topnav a:hover {
             background-color: #ddd;
-            color: black;
+            color: #222;
         }
 
         .topnav a.active {
@@ -72,46 +77,456 @@ function myFunction() {
         }
 
         @media screen and (max-width: 600px) {
-            .topnav a:not(:first-child) {display: none;}
-            .topnav a.icon {float: right; display: block;}
+            .topnav a:not(:first-child) { display: none; }
+            .topnav a.icon { float: right; display: block; }
         }
 
         @media screen and (max-width: 600px) {
-            .topnav.responsive {position: relative;}
-            .topnav.responsive .icon {position: absolute; right: 0; top: 0;}
-            .topnav.responsive a {float: none; display: block; text-align: left;}
+            .topnav.responsive { position: relative; }
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
         }
 
-        .logo {position: relative; z-index: 1;}
+        .logo {
+            position: relative;
+            z-index: 1;
+        }
 
-		.it {
-			font-weight: 600;  /* Bold for Italian */
-			color: #222;       /* Darker color */
-			font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
-		}
+        /* =========================================================
+           GENERAL TYPOGRAPHY / BILINGUAL TEXT
+           ========================================================= */
+        .it {
+            font-weight: 600;
+            color: #222;
+            font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
+        }
 
-		.en {
-			font-style: italic; /* Italic for English */
-			font-weight:600;  /* Bold for Italian */
-			color: #555;        /* Softer color */
-			font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
-		}
+        .en {
+            font-style: italic;
+            font-weight: 500;
+            color: #666;
+            font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
+        }
 
-		section .content p {
-			margin: 16px 0;      /* subtle spacing between lines */
-		}
-    .video-container {
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		}
+        /* Remove the excessive paragraph spacing from the original layout. */
+        .lessons-page p {
+            margin: 0;
+        }
 
-		.video-container iframe {
-		width: 100%;
-		height: 100%;
-		}
+        .lessons-page a {
+            transition: all 0.2s ease;
+        }
+
+        /* =========================================================
+           INTRO
+           ========================================================= */
+        .lessons-intro-copy {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 1rem;
+        }
+
+        .lessons-intro-copy h2 {
+            margin-bottom: 0.4rem;
+        }
+
+        .lessons-intro-copy h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .lessons-intro-copy .intro-lead {
+            margin-bottom: 1.2rem;
+        }
+
+        .free-trial-banner {
+            display: inline-block;
+            padding: 0.65rem 1.2rem;
+            border-radius: 999px;
+            background: #417014;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .free-trial-banner:hover {
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        /* =========================================================
+           LESSON CARDS
+           ========================================================= */
+        .lesson-section {
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .lesson-section > header {
+            padding-bottom: 1.25rem;
+        }
+
+        .lesson-section > header h2 {
+            margin-bottom: 0.25rem;
+        }
+
+        .lesson-section > header .section-subtitle {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .lesson-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .lesson-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 1.75rem;
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.10);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .lesson-card::before {
+            content: "";
+            display: block;
+            height: 6px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #417014;
+        }
+
+        .lesson-card-head {
+            padding-top: 0.35rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .lesson-card-zone {
+            margin: 0 0 0.2rem;
+            font-size: 1.55rem;
+            line-height: 1.15;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .lesson-card-day {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .lesson-card-day .en {
+            font-size: 0.85em;
+            margin-left: 0.25rem;
+        }
+
+        .lesson-highlight {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin: 0 0 1.25rem;
+            padding: 0.9rem 1rem;
+            border-radius: 12px;
+            background: #f1f4ed;
+        }
+
+        .lesson-highlight .time {
+            font-size: 1.35rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .lesson-highlight .class-name {
+            font-weight: 700;
+        }
+
+        .lesson-highlight .class-detail {
+            display: block;
+            margin-top: 0.15rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .lesson-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .lesson-info-item {
+            line-height: 1.35;
+            font-size: 0.92rem;
+        }
+
+        .lesson-info-item .icon-label {
+            display: block;
+            margin-bottom: 0.15rem;
+            font-weight: 700;
+        }
+
+        .lesson-info-item .subtext {
+            display: block;
+            font-size: 0.82rem;
+            color: #666;
+        }
+
+        .lesson-location {
+            grid-column: 1 / -1;
+        }
+
+        .lesson-location a {
+            text-decoration: underline;
+        }
+
+        .trial-box {
+            margin-top: auto;
+            margin-bottom: 1.25rem;
+            padding: 0.85rem 1rem;
+            border: 2px solid #417014;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .trial-box strong {
+            display: block;
+            font-size: 1rem;
+        }
+
+        .trial-box small {
+            display: block;
+            margin-top: 0.2rem;
+            color: #555;
+        }
+
+        .lesson-actions {
+            display: flex;
+            gap: 0.65rem;
+            flex-wrap: wrap;
+        }
+
+        .lesson-actions a {
+            flex: 1 1 170px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 10px;
+            padding: 0.65rem 0.8rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: #417014;
+            color: #fff !important;
+        }
+
+        .btn-primary:hover {
+            background: #31540f;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            border: 2px solid #417014;
+            color: #417014 !important;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: #f1f4ed;
+            transform: translateY(-1px);
+        }
+
+        /* =========================================================
+           WHY / SUPPORTING CONTENT
+           ========================================================= */
+        .why-zouk {
+            margin: 0 auto 3rem;
+            max-width: 950px;
+            padding: 2rem;
+            border-radius: 18px;
+            background: #f6f7f4;
+        }
+
+        .why-zouk h3 {
+            margin-bottom: 1rem;
+        }
+
+        .why-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.65rem 1.5rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .why-list li {
+            margin: 0;
+            padding: 0.35rem 0;
+            font-weight: 600;
+        }
+
+        .why-list li::before {
+            content: "✓";
+            margin-right: 0.5rem;
+            color: #417014;
+            font-weight: 900;
+        }
+
+        /* =========================================================
+           MAP + VIDEO
+           ========================================================= */
+        .map-container {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            height: 420px;
+            border: 0;
+        }
+
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .supporting-section {
+            padding-top: 1rem;
+        }
+
+        .supporting-section header h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .supporting-section header p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* =========================================================
+           CONTACT CTA
+           ========================================================= */
+        .contact-cta {
+            text-align: center;
+        }
+
+        .contact-cta h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-cta > p {
+            margin-bottom: 1.5rem;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 50px;
+            padding: 0.7rem 1.3rem;
+            border-radius: 10px;
+            background: #417014;
+            color: #fff !important;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .whatsapp-button:hover {
+            background: #31540f;
+            transform: translateY(-1px);
+        }
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+        @media screen and (max-width: 600px) {
+            .lessons-intro-copy {
+                padding: 1.75rem 1rem 0.5rem;
+            }
+
+            .lesson-section {
+                padding-top: 1rem;
+            }
+
+            .lesson-card {
+                padding: 1.25rem;
+                border-radius: 14px;
+            }
+
+            .lesson-card-zone {
+                font-size: 1.35rem;
+            }
+
+            .lesson-info {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .why-zouk {
+                padding: 1.25rem;
+            }
+
+            .why-list {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container iframe {
+                height: 330px;
+            }
+
+            .lesson-actions {
+                flex-direction: column;
+            }
+
+            .lesson-actions a {
+                flex-basis: auto;
+                width: 100%;
+            }
+        }
     </style>
 </head>
-<body class="is-preload">  
+
+<body class="is-preload">
 
 <header class="mainHeader">
     <nav>
@@ -126,157 +541,298 @@ function myFunction() {
         </div>
 
         <div class="logo">
-            <a href="./index.html"><img src="./images/logo3.jpg" alt="IZR Logo"></a>
+            <a href="./index.html">
+                <img src="./images/logo3.jpg" alt="Impero Zouk Rome Logo">
+            </a>
         </div>
     </nav>
 </header>
 
-<div id="wrapper">
-    <!-- Intro -->
+<div id="wrapper" class="lessons-page">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
     <section class="intro">
         <header>
             <ul class="actions">
-                <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+                <li>
+                    <a href="#lessons" class="arrow scrolly">
+                        <span class="label">Next</span>
+                    </a>
+                </li>
             </ul>
         </header>
+
         <div class="content">
             <span class="image fill" data-position="center">
-                <img src="./images/images_lessons/Cover_lessons.jpg" style="width:100%;" alt="Cover Lessons Image" />
+                <img
+                    src="./images/images_lessons/Cover_lessons.jpg"
+                    style="width:100%;"
+                    alt="Brazilian Zouk lessons in Rome"
+                />
             </span>
         </div>
     </section>
 
-    <!-- Lessons Section -->
-    <section>
-      <header>
-        <h2>LEZIONI <i>| LESSONS</i></h2>
-        <h3>Vieni ad imparare con noi! <i>| Come to learn from us!</i></h3>
-        <p>Abbiamo lezione di Brazilian Zouk in diversi locations della città. <i>| We teach Brazilian Zouk in different locations around the city.</i></p>
-      </header>
-      <div class="content">
-        <div class="gallery">
-          <iframe src="https://www.google.com/maps/d/embed?mid=1MuLllDd_o4BdMVJGSsx4_-bOHTM9Ino&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
+    <!-- =========================================================
+         INTRO COPY
+         ========================================================= -->
+    <section id="lessons">
+        <div class="content lessons-intro-copy">
+            <h2>LEZIONI <i>| LESSONS</i></h2>
+            <h3>Vieni ad imparare con noi! <i>| Come learn with us!</i></h3>
+
+            <p class="intro-lead">
+                🇮🇹 Lezioni di Brazilian Zouk in diverse zone di Roma.<br>
+                <span class="en">🇬🇧 Brazilian Zouk classes in different areas of Rome.</span>
+            </p>
+
+            <span class="free-trial-banner">✨ Lezione di prova gratuita | Free trial class ✨</span>
         </div>
-        <br>
-        <p>I nostri istruttori locali, Javi e Mari, sono <a href="https://alexdecarvalho.com.br/brazilianzoukmac/">istruttori certificati MAC</a>. <i>| Our local instructors, Javi and Mari, are <a href="https://alexdecarvalho.com.br/brazilianzoukmac/">MAC certified instructors</a> .</i></p>
-        <br>
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/8ZIJ3I1EaV0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
     </section>
 
-<!-- Tuscolana Section -->
-<section>
-  <header>
-    <h2>ZONA TUSCOLANA <i>| TUSCOLANA ZONE</i></h2>
-    <h3>MERCOLEDÌ <i>| WENESDAYS</i></h3>
-    <p>Vicino alla fermata della metro A Numidio Quadrato, al Sakura Gym. <i>| Close to the Numidio Quadrato station of Metro A, at the Sakura Gym.</i></p>
-  </header>
+    <!-- =========================================================
+         CLASS CARDS
+         ========================================================= -->
+    <section class="lesson-section">
+        <header>
+            <h2>SCEGLI LA TUA LEZIONE <i>| CHOOSE YOUR CLASS</i></h2>
+            <p class="section-subtitle">
+                🇮🇹 Trova la sede più comoda per te e prenota la tua prova gratuita.
+                <span class="en">| 🇬🇧 Choose the location that works best for you and book your free trial.</span>
+            </p>
+        </header>
 
-  <div class="content">
-    <p>
-      <span class="it">🇮🇹 In collaborazione con Sakura Gym</span> 
-      <span class="en">| 🇬🇧 In collaboration with Sakura Gym</span>
-    </p>
+        <div class="content">
+            <div class="lesson-cards">
 
-    <p>
-      <span class="it">🇮🇹 👨‍🏫 Maestri: Javi &amp; Mari</span> 
-      <span class="en">| 🇬🇧 Teachers: Javi &amp; Mari</span>
-    </p>
+                <!-- TUSCOLANA -->
+                <article class="lesson-card">
+                    <div class="lesson-card-head">
+                        <h3 class="lesson-card-zone">📍 TUSCOLANA</h3>
+                        <p class="lesson-card-day">
+                            MERCOLEDÌ <span class="en">| WEDNESDAY</span>
+                        </p>
+                    </div>
 
-    <p>
-      📍 <strong>Location:</strong> Sakura Gym – <a href="https://maps.app.goo.gl/fDS9guocuDXX6Lza8">Via Vestricio Spurinna, 32, 00175 Roma RM</a>
-    </p>
+                    <div class="lesson-highlight">
+                        <div class="time">20:15</div>
+                        <div>
+                            <span class="class-name">
+                                Lezione Livello Principiante
+                                <span class="en">| Beginner Level</span>
+                            </span>
+                            <span class="class-detail">1h15min</span>
+                        </div>
+                    </div>
 
-    <p>
-      🕗 20:15 → Lezione Livello Pricipiante (1h15min)<br>
-      🕗 21:30 → Practice/Social (1h) 
-    </p>
+                    <div class="lesson-info">
+                        <div class="lesson-info-item">
+                            <span class="icon-label">👨‍🏫 Maestri | Teachers</span>
+                            Javi &amp; Mari
+                        </div>
 
-    <p>
-      <span class="it">🇮🇹 ✨ Lezione di prova gratuita!</span> 
-      <span class="en">| 🇬🇧 Trial class free! ✨</span>
-    </p>
+                        <div class="lesson-info-item">
+                            <span class="icon-label">💃 Practice / Social</span>
+                            21:30 · 1h
+                        </div>
 
-    <p>
-      <span class="it">🇮🇹 (Per la prova non è richiesto il certificato medico)</span> 
-      <span class="en">| 🇬🇧 (No medical certificate required for the trial)</span>
-    </p>
+                        <div class="lesson-info-item lesson-location">
+                            <span class="icon-label">🏠 Sakura Gym</span>
+                            <a href="https://maps.app.goo.gl/fDS9guocuDXX6Lza8" target="_blank" rel="noopener">
+                                Via Vestricio Spurinna, 32, 00175 Roma RM
+                            </a>
+                            <span class="subtext">
+                                🚇 Metro A · Numidio Quadrato
+                            </span>
+                        </div>
+                    </div>
 
-	<p>
-		<span class="it">🇮🇹 Registrati <a href="https://forms.gle/B6Ry2PnjrjpcDmFA6">QUI</a></span>
-		<span class="en">| 🇬🇧 Register <a href="https://forms.gle/B6Ry2PnjrjpcDmFA6">HERE</a></span>
-	</p>
+                    <div class="trial-box">
+                        <strong>✨ LEZIONE DI PROVA GRATUITA</strong>
+                        <small>🇬🇧 Free trial class · No medical certificate required for the trial</small>
+                    </div>
 
-<!--     <div class="gallery">
-      <a href="./images/images_lessons/fulls/Lessons_2025_Sakura.jpg" class="landscape">
-        <img src="./images/images_lessons/thumbs/Lessons_2025_Sakura_thumb.png" alt="Brazilian Zouk lessons 2025 poster at Sakura Gym, Rome" />
-      </a>
-    </div> -->
-  </div>
-</section>
+                    <div class="lesson-actions">
+                        <a
+                            href="https://forms.gle/B6Ry2PnjrjpcDmFA6"
+                            class="btn-primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ✨ PRENOTA LA PROVA<br>BOOK FREE TRIAL
+                        </a>
 
+                        <a
+                            href="https://maps.app.goo.gl/fDS9guocuDXX6Lza8"
+                            class="btn-secondary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            📍 COME ARRIVARE<br>GET DIRECTIONS
+                        </a>
+                    </div>
+                </article>
 
-<!-- <Tiburno> Section -->
-<section>
-  <header>
-    <h2>ZONA TIBURNO <i>| TIBURNO ZONE</i></h2>
-    <h3>MERCOLEDÌ <i>| WEDNESDAYS</i></h3>
-    <p>Vicino alla fermata della metro B Monti Tiburtini <i>| Close to the Monti Tiburtini station of Metro C at <a href='https://vivadancestudio.it/brazilian-zouk/'>Viva Dance Studio.</a></i></p>
-  </header>
+                <!-- TIBURNO -->
+                <article class="lesson-card">
+                    <div class="lesson-card-head">
+                        <h3 class="lesson-card-zone">📍 TIBURNO</h3>
+                        <p class="lesson-card-day">
+                            MERCOLEDÌ <span class="en">| WEDNESDAY</span>
+                        </p>
+                    </div>
 
-  <div class="content">
-    <p>
-      <span class="it">🇮🇹 In collaborazione con <a href='https://vivadancestudio.it/brazilian-zouk/'>Viva Dance Studio.</a></span>
-      <span class="en">| 🇬🇧 In collaboration with <a href='https://vivadancestudio.it/brazilian-zouk/'>Viva Dance Studio.</a></span>
-    </p>
+                    <div class="lesson-highlight">
+                        <div class="time">20:30</div>
+                        <div>
+                            <span class="class-name">
+                                Lezione Livello Open
+                                <span class="en">| Open Level</span>
+                            </span>
+                            <span class="class-detail">1h</span>
+                        </div>
+                    </div>
 
-    <p>
-      <span class="it">🇮🇹 👨‍🏫 Maestri: Javi &amp; Mari</span> 
-      <span class="en">| 🇬🇧 Teachers: Javi &amp; Mari</span>
-    </p>
+                    <div class="lesson-info">
+                        <div class="lesson-info-item">
+                            <span class="icon-label">👨‍🏫 Maestri | Teachers</span>
+                            Javi &amp; Mari
+                        </div>
 
-    <p>
-      📍 Location: <a href='https://vivadancestudio.it/brazilian-zouk/'>Viva Dance Studio.</a> – Spazio Tiburno – <a href="https://maps.app.goo.gl/H8ZSYkwi5Hxprej6A">Via Tiburno 33, 00159 Roma RM</a>
-    </p>
+                        <div class="lesson-info-item">
+                            <span class="icon-label">💃 Livello | Level</span>
+                            Open Level
+                        </div>
 
-    <p>
-      🕗 20:30 → Lezione Livello Open (1h)
-    </p>
+                        <div class="lesson-info-item lesson-location">
+                            <span class="icon-label">🏠 Viva Dance Studio · Spazio Tiburno</span>
+                            <a href="https://maps.app.goo.gl/H8ZSYkwi5Hxprej6A" target="_blank" rel="noopener">
+                                Via Tiburno 33, 00159 Roma RM
+                            </a>
+                            <span class="subtext">
+                                🚇 Metro B · Monti Tiburtini
+                            </span>
+                        </div>
+                    </div>
 
-    <p>
-      <span class="it">🇮🇹 ✨ Lezione di prova gratuita! </span> 
-      <span class="en">| 🇬🇧 Trial class free! ✨</span>
-    </p>
+                    <div class="trial-box">
+                        <strong>✨ LEZIONE DI PROVA GRATUITA</strong>
+                        <small>🇬🇧 Free trial class · No medical certificate required for the trial</small>
+                    </div>
 
-    <p>
-      <span class="it">🇮🇹 (Per la prova non è richiesto il certificato medico)</span> 
-      <span class="en">| 🇬🇧 (No medical certificate required for the trial)</span>
-    </p>
+                    <div class="lesson-actions">
+                        <a
+                            href="https://forms.gle/MWbszrFdHt4kUd3J6"
+                            class="btn-primary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            ✨ PRENOTA LA PROVA<br>BOOK FREE TRIAL
+                        </a>
 
-    <p>
-		<span class="it">🇮🇹 Registrati <a href="https://forms.gle/MWbszrFdHt4kUd3J6">QUI</a></span>
-		<span class="en">| 🇬🇧 Register <a href="https://forms.gle/MWbszrFdHt4kUd3J6">HERE</a></span>
-	</p>
+                        <a
+                            href="https://maps.app.goo.gl/H8ZSYkwi5Hxprej6A"
+                            class="btn-secondary"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            📍 COME ARRIVARE<br>GET DIRECTIONS
+                        </a>
+                    </div>
+                </article>
 
-<!--     <div class="gallery">
-      <a href="./images/images_lessons/fulls/Lessons_2025_VivaDance.jpg" class="landscape">
-        <img src="./images/images_lessons/thumbs/Lessons_2025_VivaDance_thumb.png" alt="Brazilian Zouk lessons 2025 poster at Viva Dance Studio, Rome" />
-      </a>
-    </div> -->
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
-    <!-- Contact Section -->
-    <section>
-        <header><h2>Get in touch</h2></header>
+    <!-- =========================================================
+         WHY JOIN
+         ========================================================= -->
+    <section class="supporting-section">
+        <header>
+            <h2>PERCHÉ IMPERO ZOUK? <i>| WHY LEARN WITH US?</i></h2>
+        </header>
+
+        <div class="content">
+            <div class="why-zouk">
+                <ul class="why-list">
+                    <li>Brazilian Zouk</li>
+                    <li>Lezione di prova gratuita <span class="en">| Free trial</span></li>
+                    <li>Javi &amp; Mari · istruttori certificati MAC</li>
+                    <li>Community di Zouk a Roma</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         VIDEO
+         ========================================================= -->
+    <section class="supporting-section">
+        <header>
+            <h2>SCOPRI IL BRAZILIAN ZOUK <i>| DISCOVER BRAZILIAN ZOUK</i></h2>
+            <p>
+                🇮🇹 Guarda il Brazilian Zouk in azione.
+                <span class="en">| 🇬🇧 See Brazilian Zouk in action.</span>
+            </p>
+        </header>
+
+        <div class="content">
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/8ZIJ3I1EaV0"
+                    title="Brazilian Zouk - Impero Zouk Rome"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         MAP
+         ========================================================= -->
+    <section class="supporting-section">
+        <header>
+            <h2>DOVE SIAMO <i>| WHERE WE ARE</i></h2>
+            <p>
+                🇮🇹 Scopri le nostre sedi a Roma.
+                <span class="en">| 🇬🇧 Find our class locations in Rome.</span>
+            </p>
+        </header>
+
+        <div class="content">
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/d/embed?mid=1MuLllDd_o4BdMVJGSsx4_-bOHTM9Ino&hl=en&ehbc=2E312F"
+                    title="Impero Zouk Rome lesson locations map"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+    <section class="contact-cta">
+        <header>
+            <h2>HAI DOMANDE? <i>| HAVE QUESTIONS?</i></h2>
+        </header>
+
+        <div class="content">
+            <p>
+                🇮🇹 Scrivici su WhatsApp e saremo felici di aiutarti!
+                <span class="en">| 🇬🇧 Message us on WhatsApp and we'll be happy to help!</span>
+            </p>
+
+            <a href="https://wa.me/393477522354" class="whatsapp-button" target="_blank" rel="noopener">
+                💬 WHATSAPP · JAVI
+            </a>
+        </div>
+
         <footer>
             <ul class="items">
                 <li>
@@ -290,16 +846,31 @@ function myFunction() {
                 <li>
                     <h3>Elsewhere</h3>
                     <ul class="icons">
-                        <li><a href="https://www.facebook.com/imperozouk" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="https://www.instagram.com/impero.zouk.rome/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="https://github.com/javierconcha/impero-zouk_00" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        <li>
+                            <a href="https://www.facebook.com/imperozouk" class="icon brands fa-facebook-f">
+                                <span class="label">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/impero.zouk.rome/" class="icon brands fa-instagram">
+                                <span class="label">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/javierconcha/impero-zouk_00" class="icon brands fa-github">
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </footer>
     </section>
 
-    <div class="copyright">&copy; Impero Zouk Rome 2019-2026. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+    <div class="copyright">
+        &copy; Impero Zouk Rome 2019-2026. All rights reserved.
+        Design: <a href="https://html5up.net">HTML5 UP</a>.
+    </div>
 </div>
 
 <script src="./assets/js/jquery.min.js"></script>
@@ -312,8 +883,11 @@ function myFunction() {
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") { x.className += " responsive"; } 
-    else { x.className = "topnav"; }
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }
 </script>
 
